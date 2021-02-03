@@ -31,19 +31,32 @@
       </select>
 
       
-      <input type="button" id="Add" value="Add Movie" onclick="formSubmitEvent()">
+      <input type="button" id="Add" value="Add Movie">  <!--take out onclick="formSubmitEvent()"-->
 
 
     </fieldset>
 
   </form>
   <br><br>
+
+
+  <fieldset id = output>
+  <button type="button" id="show">Show Movies</button>
+  <div id="list"> 
+  </div>
+  </fieldset>
+
+
   <!-- <input type="Show" value="Show Movie" onclick="formSubmitEvent()"> -->
+
+
+  <!--
   <div id="list">
     <button type="button" id="show">Show Movies</button>
-    <textarea rows="10" cols="60" id="output" ></textarea>
+    <textarea rows="10" cols="60" id="output" >
+    </textarea>
   </div>
-
+  -->
 
    <script type="text/javascript" src="movie.js"></script>
    <script type="text/javascript" src="main.js"></script>
