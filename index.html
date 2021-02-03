@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>movie</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+</head>
+
+
+<body>
+
+  <form name="mainFrom" onsubmit="return false">
+
+    <fieldset id="movieInfo">
+      <legend>Movie Information</legend>
+
+      <label for="moviename"> Movie Title:</label>
+      <input name="moviename" id="moviename" placeholder="movie name" type="text" />
+
+      <label for="rating">Enter Rating:</label>
+      
+      <select name="rating" id="rating" size="1">
+
+        <option value="" selected =""></option>
+        <option value="1">1 (bad)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (good)</option>
+      </select>
+
+      
+      <input type="button" id="Add" value="Add Movie" onclick="formSubmitEvent()">
+
+
+    </fieldset>
+
+  </form>
+  <br><br>
+  <!-- <input type="Show" value="Show Movie" onclick="formSubmitEvent()"> -->
+  <div id="list">
+    <button type="button" id="show">Show Movies</button>
+    <textarea rows="10" cols="60" id="output" ></textarea>
+  </div>
+
+
+   <script type="text/javascript" src="movie.js"></script>
+   <script type="text/javascript" src="main.js"></script>
+   
+</body>
