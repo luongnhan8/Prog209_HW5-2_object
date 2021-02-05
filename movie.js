@@ -35,5 +35,5 @@ Movie.prototype.validate = function() {
 ///I am not sure about the function where should I used it?
 /// I used it on the main.js 41 line (Jaegyeom)
 Movie.prototype.toString = function() {
-  return  string(this.name) + " " + string(this.rating) + "\n";
+  return this.name.toString() + " " + this.rating.toString() + "\n";
     };

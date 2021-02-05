@@ -15,15 +15,17 @@ let ul = document.createElement("ul")
 document.addEventListener("DOMContentLoaded", function(event) {
     list_js.style.display = "none";
 
+
     addButton_js.addEventListener("click", function() {
         let addmovies = new Movie (
             moviename_js.value,
             rating_js.value
-        );
+            );
+
         if (addmovies.validate()){
             movielist[movielist.length] = addmovies;
             clear();
-            console.log(movielist) ///Test Console
+
         } else{
             alert("Type agian. Sorry.");
             clear();
@@ -36,10 +38,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
         ///list_js.style.visibility = "visible";
         list_js.appendChild(ul);
         for(i=0; i <movielist.length; i++) {
+
+
+            let addmovies = new Movie (
+                movielist[i].name,
+                movielist[i].rating
+                );
+
             let li = document.createElement("li")
             ul.appendChild(li)
-            //li.innerHTML = movielist.toString()
-            li.innerHTML = movielist[i].name + ", " + movielist[i].rating
+            li.innerHTML = addmovies.toString()
+            //li.innerHTML = movielist[i].name + ", " + movielist[i].rating
         };
         movielist.length = 0 /// to prevent overlap
 
